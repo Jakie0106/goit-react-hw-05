@@ -1,15 +1,17 @@
 .wrapper {
+  width: 100%;
 }
 
 .header {
-  position: fixed;
-  top: 0px;
+  /* position: fixed;
+  top: 0px; */
   background-color: blueviolet;
   width: 100%;
   padding: 24px 32px;
   display: flex;
   flex-direction: row;
   gap: 16px;
+  width: 100%;
 }
 
 .headerLink {

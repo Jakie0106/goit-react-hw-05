@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { fetchMovieById } from "../../services/api";
 import {
   Link,
@@ -12,7 +12,7 @@ import s from "./MovieDetailPage.module.css";
 const MovieDetailsPage = () => {
   const location = useLocation();
   const goBack = useRef(location.state ?? "/movies");
-  console.log(location);
+
   const { movieId } = useParams();
   const [movieDetail, setMovieDetail] = useState(null);
   useEffect(() => {
@@ -54,7 +54,9 @@ const MovieDetailsPage = () => {
         <NavLink to="cast">Cast</NavLink>
         <NavLink to="reviews">Reviews</NavLink>
       </div>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

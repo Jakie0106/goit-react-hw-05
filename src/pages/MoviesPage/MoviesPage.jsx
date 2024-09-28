@@ -1,12 +1,13 @@
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useEffect, useMemo, useState } from "react";
 import { fetchSearchByQuery } from "../../services/api";
+import TrendMovieList from "../../components/TrendMovieList/TrendMovieList";
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("query") ?? "";
-  const location = useLocation();
+
   const [movieSearchQuery, setMovieSearchQuery] = useState([]);
   useEffect(() => {
     const getSearchQuery = async () => {
@@ -36,16 +37,7 @@ const MoviesPage = () => {
   return (
     <div>
       <SearchBar handleChangeQuery={handleChangeQuery} />
-
-      <ul>
-        {searchMovie.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`${movie.id.toString()}`} state={location}>
-              <p>{movie.title}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <TrendMovieList movieList={searchMovie} />
     </div>
   );
 };
