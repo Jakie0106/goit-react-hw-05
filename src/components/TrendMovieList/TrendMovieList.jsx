@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { fetchTrendMovies } from "../../services/api";
 import { Link, useLocation } from "react-router-dom";
+import s from "./TrendMovieList.module.css";
 
 const TrendMovieList = () => {
   const location = useLocation();
@@ -15,13 +16,13 @@ const TrendMovieList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Trending today</h2>
-      <ul>
+    <div className={s.wrapper}>
+      <h2 className={s.title}>Trending today</h2>
+      <ul className={s.list}>
         {movieList.map((movie) => (
-          <li key={movie.id}>
+          <li key={movie.id} className={s.listItem}>
             <Link to={`movies/${movie.id.toString()}`} state={location}>
-              <p>{movie.title}</p>
+              <p className={s.listItemText}>{movie.title}</p>
             </Link>
           </li>
         ))}

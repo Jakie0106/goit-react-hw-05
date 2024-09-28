@@ -1,0 +1,28 @@
+.wrapper {
+}
+
+.castList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.castListItem {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.castInfoCont {
+}
+
+.castItemImg {
+  width: 80px;
+}
+
+.castName {
+}
+
+.castInfo {
+}

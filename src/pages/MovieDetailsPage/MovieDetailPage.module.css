@@ -1,0 +1,44 @@
+.wrapper {
+  margin-top: 100px;
+  padding: 24px 32px;
+}
+
+.current {
+}
+
+.goBack {
+}
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+}
+
+.detailImg {
+  width: 200px;
+}
+
+.movieName {
+}
+
+.score {
+}
+
+.overview {
+}
+
+.overviewText {
+}
+
+.genres {
+}
+
+.genresText {
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}

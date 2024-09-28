@@ -1,0 +1,24 @@
+.wrapper {
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  background-color: blueviolet;
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.headerLink {
+  border: 1.5px solid black;
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  background-color: darkgray;
+}
