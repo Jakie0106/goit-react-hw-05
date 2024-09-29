@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import s from "./TrendMovieList.module.css";
+import s from "./MovieList.module.css";
 import { Suspense } from "react";
 
 const TrendMovieList = ({ movieList }) => {
